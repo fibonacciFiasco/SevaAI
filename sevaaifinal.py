@@ -72,6 +72,8 @@ def run_sevaai():
     response = detect_symptom(user_text)
     emotion = detect_emotion(user_text)
     print(f"DEBUG: Symptom: {response}, Emotion: {emotion}")
+if __name__ == "__main__":
+    run_sevaai()
 
     full_response = ""
     if emotion:
@@ -79,4 +81,5 @@ def run_sevaai():
     full_response += response
 
     speak_response(full_response)
+
     log_interaction(user_text, full_response)
